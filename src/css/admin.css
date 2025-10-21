@@ -15,7 +15,7 @@ ul {
     padding: 30px 0;
 }
 
-.panel__excursins {
+.panel__excursions {
     width: 70%;
 }
 
@@ -24,7 +24,7 @@ ul {
     flex-wrap: wrap;
 }
 
-.excurions__item {
+.excursions__item {
     border: 1px solid #bbb;
     border-radius: 5px;
     margin: 10px;
@@ -50,4 +50,9 @@ ul {
 
 .form__field--longtext {
     height: 100px;
+}
+
+.excursions__item--prototype,
+.summary__item--prototype {
+  display: none;
 }

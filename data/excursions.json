@@ -1,37 +1,30 @@
 {
   "excursions": [
     {
-      "id": 1,
-      "title": "Wyprawa w Tatry",
-      "description": "Całodniowa wycieczka górska z przewodnikiem",
-      "adultPrice": 120,
-      "childPrice": 80
-    },
-    {
-      "id": 2,
-      "title": "Zwiedzanie Krakowa",
-      "description": "Spacer po rynku i Wawelu z przewodnikiem",
-      "adultPrice": 90,
-      "childPrice": 50
+      "id": "536e",
+      "title": "kraków",
+      "description": "Lorem ipsum",
+      "adultPrice": 100,
+      "childPrice": 60
     }
   ],
   "orders": [
     {
-      "id": "e3e6",
+      "id": "b2a5",
       "name": "Олексій",
       "email": "lehkrylov1996@gmail.com",
       "items": [
         {
-          "id": 1,
-          "title": "Wyprawa w Tatry",
-          "adultPrice": 120,
-          "childPrice": 80,
-          "adults": 33,
-          "children": 28
+          "id": "536e",
+          "title": "kraków",
+          "adults": 2,
+          "children": 2,
+          "adultPrice": 150,
+          "childPrice": 60
         }
       ],
-      "totalPrice": "199PLN",
-      "date": "2025-10-21T10:36:43.122Z"
+      "total": 420,
+      "date": "2025-10-21T11:41:50.268Z"
     }
   ]
 }
