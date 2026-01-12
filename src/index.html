@@ -1,76 +1,157 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="ie=edge"
+    >
     <title>JavaScript: API oraz FETCH - client, devmentor.pl</title>
 </head>
+
 <body>
-   
+
     <section class="panel">
-        <ul class="panel__excursions excursions">
-            <li class="excursions__item excursions__item--prototype">
+        <ul class="panel__excursions excursions 
+        grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+        gap-6">
+            <li class="excursions__item excursions__item--prototype 
+            bg-gradient-to-br from-blue-50 via-white to-indigo-50
+            rounded-2xl shadow-md p-6
+            flex flex-col gap-4
+            hover:shadow-lg hover:from-blue-100 hover:to-indigo-100
+            transition-all">
                 <header class="excursions__header">
-                    <h2 class="excursions__title">Ogrodzieniec</h2>
-                    <p class="excursions__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam quam laboriosam quaerat temporibus dicta vitae maxime! Nemo, nobis veritatis?</p>
+                    <h2 class="excursions__title text-xl font-semibold text-gray-800">Ogrodzieniec</h2>
+                    <p class="excursions__description text-gray-600 text-sm leading-relaxed">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit. Amet aliquam quam laboriosam quaerat temporibus dicta vitae
+                        maxime! Nemo, nobis veritatis?</p>
                 </header>
                 <form class="excursions__form">
                     <div class="excursions__field">
-                        <label class="excursions__field-name">
-                            Dorosły: 99PLN x <input class="excursions__field-input" name="adults" />
+                        <label class="excursions__field-name
+                                flex justify-between items-center
+                                text-sm text-gray-700">
+                            Dorosły: 99PLN x
+                            <input
+                                class="excursions__field-input
+                                        w-24 sm:w-28 md:w-32 border rounded-lg px-2 py-1
+                                        text-center focus:outline-none
+                                        focus:ring-2 focus:ring-blue-500"
+                                name="adults"
+                            />
                         </label>
                     </div>
                     <div class="excursions__field">
-                        <label class="excursions__field-name">
-                            Dziecko: 50PLN x <input class="excursions__field-input" name="children" />
+                        <label class="excursions__field-name
+                                flex justify-between items-center
+                                text-sm text-gray-700">
+                            Dziecko: 50PLN x
+                            <input
+                                class="excursions__field-input
+                                    w-24 sm:w-28 md:w-32 border rounded-lg px-2 py-1
+                                    text-center focus:outline-none
+                                    focus:ring-2 focus:ring-blue-500"
+                                name="children"
+                            />
                         </label>
                     </div>
                     <div class="excursions__field excursions__field--submit">
-                        <input 
-                            class="excursions__field-input excursions__field-input--submit" 
-                            value="dodaj do zamówienia"
+                        <input
+                            class="excursions__field-input excursions__field-input--submit
+                            mt-2 bg-blue-600 text-white
+                            py-2 rounded-xl font-medium
+                            hover:bg-blue-700 transition-colors
+                            cursor-pointer"
+                            value=" dodaj do zamówienia "
                             type="submit"
                         />
                     </div>
                 </form>
             </li>
         </ul>
-        <section class="panel__form">
-            <form class="panel__order order" novalidate>
-                <div class="order__total-price">
+        <section class="panel__form  bg-gradient-to-br from-blue-50 via-white to-indigo-50
+                rounded-2xl shadow-md p-6
+                flex flex-col gap-4
+                hover:shadow-lg hover:from-blue-100 hover:to-indigo-100
+                transition-all">
+            <form
+                class="panel__order order "
+                novalidate
+            >
+                <div class="order__total-price
+                    mt-4 p-4
+                    bg-gradient-to-r from-blue-50 to-indigo-50
+                    rounded-xl
+                    text-lg font-semibold
+                    flex justify-between items-center">
                     Razem:
-                    <span class="order__total-price-value">199PLN</span>
+                   <span class="order__total-price-value text-xl text-indigo-600 font-bold">0
                 </div>
                 <div class="order__field">
-                    <label class="order__field-name">
-                        Imię i nazwisko: <input class="order__field-input" name="name" />
+                    <label class="order__field-name flex justify-between items-center
+                                text-sm text-gray-700">
+                        Imię i nazwisko: <input
+                            class="order__field-input w-48  border rounded-lg px-2 py-1
+                                    text-center focus:outline-none
+                                    focus:ring-2 focus:ring-blue-500"
+                            name="name"
+                        />
                     </label>
                 </div>
                 <div class="order__field">
-                    <label class="order__field-name">
-                        Email <input class="order__field-input" name="email" />
+                    <label class="order__field-name flex justify-between items-center
+                                text-sm text-gray-700">
+                        Email <input
+                            class="order__field-input w-56  border rounded-lg px-2 py-1
+                                    text-center focus:outline-none
+                                    focus:ring-2 focus:ring-blue-500"
+                            name="email"
+                        />
                     </label>
                 </div>
                 <div class="order__field order__field--submit">
-                    <input 
-                        class="order__field-input order__field-submit" 
-                        value="zamawiam"
+                    <input
+                        class="order__field-input order__field-submit 
+                        mt-2 bg-blue-600 text-white
+                        py-2 rounded-xl font-medium
+                        hover:bg-blue-700 transition-colors
+                        cursor-pointer"
+                        value=" zamawiam "
                         type="submit"
                     />
                 </div>
             </form>
-            <ul class="panel__summary summary">
-                <li class="summary__item summary__item--prototype">
-                    <h3 class="summary__title">
+            <ul class="panel__summary summary
+            bg-white rounded-2xl shadow-md p-4
+            flex flex-col gap-3">
+                <li class="summary__item summary__item--prototype
+                bg-gradient-to-r from-gray-50 to-white
+                rounded-xl p-4
+                flex flex-col gap-2
+                border border-gray-100">
+                    <h3 class="summary__title flex justify-between items-center text-lg font-semibold">
                         <span class="summary__name">Ogrodzieniec</span>
-                        <strong class="summary__total-price">199PLN</strong> 
-                        <a href="" class="summary__btn-remove" title="usuń">X</a>
+                        <strong class="summary__total-price text-blue-600 font-bold text-lg">199PLN</strong>
+                        <a
+                            href=""
+                            class="summary__btn-remove
+                        text-red-500 font-bold
+                        hover:text-red-700
+                        transition-colors cursor-pointer"
+                            title="usuń"
+                        >X</a>
                     </h3>
-                    <p class="summary__prices">dorośli: 1 x 99PLN, dzieci: 2 x 50PLN</p>
+                    <p class="summary__prices text-sm text-gray-600">dorośli: 1 x 99PLN, dzieci: 2 x 50PLN</p>
                 </li>
             </ul>
         </section>
     </section>
 </body>
+
 </html>
