@@ -1,3 +1,4 @@
+import "../css/tailwind.css";
 import './../css/admin.css';
 import ExcursionsAPI from './ExcursionsAPI';
 
