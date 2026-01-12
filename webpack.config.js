@@ -34,7 +34,7 @@ module.exports = {
                 // będą brane pod uwagę
                 exclude: /node_modules/,
                 // określam wykluczenia
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css-loader', 'postcss-loader'],
                 // określam jaki [loader]
                 // ma być wykorzystany
             }
@@ -45,7 +45,7 @@ module.exports = {
             template: './src/index.html',
             // wskazuje plik źródłowy
             filename: 'index.html',
-            // określan nazwę dla pliku
+            // określam nazwę dla pliku
             chunks: ['client'],
             // wskazuje plik do podpięcia
         }),
@@ -53,7 +53,7 @@ module.exports = {
             template: './src/admin.html',
             // wskazuje plik źródłowy
             filename: 'admin.html',
-            // określan nazwę dla pliku
+            // określam nazwę dla pliku
             chunks: ['admin'],
             // wskazuje plik do podpięcia
         })

@@ -1,6 +1,12 @@
+import '../css/tailwind.css';
 import './../css/client.css';
 import 'whatwg-fetch';
 import ExcursionsAPI from './ExcursionsAPI';
+
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  '<h1 class="text-4xl font-bold text-green-600">TAILWIND WORKS</h1>'
+);
 
 document.addEventListener('DOMContentLoaded', () => {
     renderExcursions();
